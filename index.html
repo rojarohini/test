@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+   <script>
+      $(document).ready(function(){
+               var data = { text: 'Light Rain',
+                          temp: '12',
+                          date: 'Fri, 27 Nov 2015 11:00 am EST',
+                          high: '14',
+                          low: '-2' };
+                     
+              $.each(data, function (k, v) {
+                  console.log(k, v);
+                  if(k == 'temp'){
+                      var cToFahr = v * 9 / 5 + 32;
+                      console.log(v, cToFahr);
+                  }
+              });
+      });
+   </script>
+</body>
+</html>
